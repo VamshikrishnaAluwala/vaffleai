@@ -4,14 +4,18 @@ import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-d
 import Sidebar from './components/Sidebar';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import LandingPage from './components/Home';
+import Homepage from './components/Home';
 import LoginPage from './components/LoginPage';
+import PrdPage from './components/PRD/PrdPage';
+import AboutPage from './components/AboutPage';
+import ContactPage from './components/contact/ContactPage';
+
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false); // State to track login status
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const handleLogin = () => {
-    setIsLoggedIn(true); // Call this function when the user logs in
+    setIsLoggedIn(true);
   };
 
   return (
@@ -19,13 +23,18 @@ function App() {
       <div style={{ display: 'flex' }}>
         {isLoggedIn ? (
           <>
+            {/* Render Sidebar, Header, and Footer along with routing */}
             <Sidebar />
             <div style={{ flexGrow: 1, display: 'flex', flexDirection: 'column', height: '100vh' }}>
               <Header />
               <main style={{ flexGrow: 1, padding: '20px' }}>
                 <Routes>
-                  <Route path="/home" element={<LandingPage />} /> {/* Home page */}
-                  <Route path="/" element={<Navigate to="/home" />} /> {/* Redirect "/" to "/home" when logged in */}
+                  <Route path="/home" element={<Homepage />} />
+                  <Route path="/" element={<Navigate to="/home" />} />
+                  <Route path="/prdgenration" element={<PrdPage/>} />
+                  <Route path="/about" element={<AboutPage/>} />
+                  <Route path="/contact" element={<ContactPage/>} />
+                  
                 </Routes>
               </main>
               <Footer />
@@ -33,9 +42,9 @@ function App() {
           </>
         ) : (
           <Routes>
-            <Route path="/" element={<LoginPage onLogin={handleLogin} />} /> {/* LoginPage route */}
-            <Route path="/home" element={<Navigate to="/" />} /> {/* Redirect "/home" to login if not logged in */}
-            <Route path="*" element={<Navigate to="/" />} /> {/* Redirect any other routes to LoginPage */}
+            <Route path="/" element={<LoginPage onLogin={handleLogin} />} />
+            <Route path="/home" element={<Navigate to="/" />} />
+            <Route path="*" element={<Navigate to="/" />} />
           </Routes>
         )}
       </div>

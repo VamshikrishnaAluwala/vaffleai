@@ -1,0 +1,10 @@
+/* Remove underline from links */
+.prd-page ul li a {
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Inherit color from the parent for consistency */
+  }
+  
+  .prd-page ul li a:hover {
+    color: #007BFF; /* Optional: Change color on hover */
+  }
+  

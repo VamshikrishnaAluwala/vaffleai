@@ -8,7 +8,7 @@ body, html {
 .sidebar {
   background-color: #ffffff; /* White background */
   padding: 20px;
-  width: 150px;
+  width: 300px;
   height: 100vh; /* Full height of the viewport */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a slight shadow for depth */
   display: flex;
@@ -45,6 +45,7 @@ body, html {
 .sidebar li:hover {
   background-color: #007BFF; /* Blue background on hover */
   color: white; /* Change text color to white on hover */
+  
 }
 
 .sidebar li svg {
@@ -60,3 +61,13 @@ body, html {
   border-radius: 50%;
   width: 40px;
 }
+/* Remove underline from links */
+.sidebar ul li a {
+  text-decoration: none; /* Removes underline */
+  color: inherit; /* Inherit color from the parent for consistency */
+}
+
+.sidebar ul li a:hover {
+  color: white; /* Ensure link text color matches hover background */
+}
+

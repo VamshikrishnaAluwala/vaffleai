@@ -39,9 +39,9 @@
   cursor: pointer;
 }
 
-.header-buttons button:first-child {
+.header-buttons button:first-child:hover {
   background-color: #007bff;
-  color: #fff;
+
 }
 
 .header-buttons button:last-child {

@@ -6,18 +6,19 @@ import { FaCog, FaUser, FaList } from 'react-icons/fa';
 const Sidebar = () => {
   return (
     <div className="sidebar">
-      <h2>Vaffle.AI</h2>
+      <h2>Cognify.AI</h2>
       <div className='inner-sidebar'>
         <ul>
-          <li><Link to="/"><FaCog /> Home</Link></li>
-          <li><Link to="/login"><FaUser /> Login</Link></li>
+          <li><Link to="/home"><FaCog /> Home</Link></li> 
+          <li><Link to="/about"><FaUser /> About</Link></li>
+          <li><Link to="/contact"><FaUser /> Contact Us</Link></li>
           <li><FaList /> Settings</li>
         </ul>
-        <div className="profile-section">
+        {/* <div className="profile-section">
           <img src="path/to/profile.jpg" alt="Profile" className="profile-image" />
           <p>Amanda <span role="img" aria-label="settings">⚙️</span></p>
           <p>View profile</p>
-        </div>
+        </div> */}
       </div>
     </div>
   );

@@ -5,7 +5,7 @@ import './Footer.css';
 const Footer = () => {
   return (
     <footer className="footer">
-      <p>&copy; 2024 Vaffle.AI</p>
+      <p>&copy; 2024 Cognify.AI</p>
     </footer>
   );
 };
