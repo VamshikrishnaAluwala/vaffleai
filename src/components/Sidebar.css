@@ -1,0 +1,62 @@
+/* Sidebar.css */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Ensure the body and html take full height */
+}
+
+.sidebar {
+  background-color: #ffffff; /* White background */
+  padding: 20px;
+  width: 150px;
+  height: 100vh; /* Full height of the viewport */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a slight shadow for depth */
+  display: flex;
+  flex-direction: column; /* Align items vertically */
+}
+
+.inner-sidebar {
+  flex: 1; /* This will allow inner-sidebar to grow and take available space */
+  display: flex;
+  flex-direction: column; /* Align items vertically */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.sidebar h2 {
+  color: #333;
+  margin-bottom: 20px; /* Spacing below the title */
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  flex-grow: 1; /* This will allow the list to grow to fill available space */
+}
+
+.sidebar li {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  padding: 10px; /* Add padding for a better click area */
+  border-radius: 5px; /* Optional: Rounded corners */
+  transition: background-color 0.3s; /* Smooth transition for background change */
+}
+
+.sidebar li:hover {
+  background-color: #007BFF; /* Blue background on hover */
+  color: white; /* Change text color to white on hover */
+}
+
+.sidebar li svg {
+  margin-right: 10px; /* Space between icon and text */
+}
+
+.profile-section {
+  margin-top: auto; /* Push profile section to the bottom */
+  padding-top: 20px; /* Add some spacing above the profile section */
+}
+
+.profile-image {
+  border-radius: 50%;
+  width: 40px;
+}
